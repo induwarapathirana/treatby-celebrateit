@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treats by Celebrateit - Premium Platters</title>
+    <!-- We will let Vite inject main.js -->
+  </head>
+  <body>
+    <header>
+      <a href="/" class="logo">Treats <span>Celebrateit</span></a>
+      <nav>
+        <a href="#platters" class="nav-link">Our Platters</a>
+        <a href="/customize.html" class="btn btn-accent">Customize Your Platter</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Exquisite Platters for Every Occasion</h1>
+          <p>Indulge in a premium selection of handcrafted sweets and savory treats. Delivered with elegance, crafted with love.</p>
+          <a href="/customize.html" class="btn btn-primary">Customize Your Platter Now</a>
+        </div>
+      </section>
+
+      <section id="platters" class="section">
+        <h2 class="section-title">Our Signature Platters</h2>
+        <p class="section-subtitle">Curated with the finest ingredients to bring joy to your grandest celebrations and intimate gatherings.</p>
+        
+        <div class="grid" id="platter-grid">
+          <!-- Dynamically populated via main.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+          <h3 style="margin-bottom: 1.5rem; color: var(--royal-purple);">Want something uniquely yours?</h3>
+          <a href="/customize.html" class="btn btn-accent btn-lg" style="font-size: 1.2rem; padding: 1rem 3rem;">Build Your Own Masterpiece</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Treats by Celebrateit. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

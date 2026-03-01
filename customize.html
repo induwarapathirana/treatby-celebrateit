@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customize Your Platter - Treats by Celebrateit</title>
+</head>
+
+<body style="background-color: var(--light);">
+    <header>
+        <a href="/" class="logo">Treats <span>Celebrateit</span></a>
+        <nav>
+            <a href="/" class="nav-link">Home</a>
+            <a href="/#platters" class="nav-link">Our Platters</a>
+        </nav>
+    </header>
+
+    <main class="section" style="padding-top: 2rem;">
+        <h1 class="section-title">Design Your Perfect Platter</h1>
+        <p class="section-subtitle">Mix and match from our premium selection of treats to create a platter that's
+            uniquely yours.</p>
+
+        <div class="customize-container">
+            <!-- Left Side: Item Selection -->
+            <div id="custom-items-container">
+                <!-- Dynamically populated via customize.js -->
+            </div>
+
+            <!-- Right Side: Sticky Checkout Cart -->
+            <div>
+                <div class="cart-sidebar">
+                    <h2 style="color: var(--royal-purple); margin-bottom: 1.5rem; font-size: 1.5rem;">Your Selection
+                    </h2>
+
+                    <div id="cart-items" style="min-height: 100px;">
+                        <p style="color: #888; text-align: center; margin-top: 2rem;">Your platter is empty.</p>
+                    </div>
+
+                    <hr style="border: 0; border-top: 2px solid var(--gray); margin: 1.5rem 0;">
+
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 1.2rem; font-weight: 600;">Total</span>
+                        <span class="cart-total" id="cart-total-price">$0.00</span>
+                    </div>
+
+                    <button id="checkout-btn" class="btn btn-primary"
+                        style="width: 100%; margin-top: 1rem; opacity: 0.5; pointer-events: none;">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Treats by Celebrateit. All rights reserved.</p>
+    </footer>
+
+    <!-- Checkout Modal Container -->
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="modal">
+            <h2 style="color: var(--royal-purple); margin-bottom: 1.5rem; font-size: 1.8rem;">Complete Order</h2>
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="customerName">Full Name</label>
+                    <input type="text" id="customerName" required placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="customerEmail">Email Address</label>
+                    <input type="email" id="customerEmail" required placeholder="jane@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number</label>
+                    <input type="tel" id="customerPhone" required placeholder="(123) 456-7890">
+                </div>
+                <div class="form-group">
+                    <label for="neededDate">Date Needed</label>
+                    <input type="date" id="neededDate" required>
+                </div>
+                <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">Once ordered, we will reach out for
+                    confirmation and payment details.</p>
+
+                <div style="display: flex; gap: 1rem;">
+                    <button type="button" id="close-modal-btn" class="btn btn-outline" style="flex: 1;">Cancel</button>
+                    <button type="submit" id="submit-order-btn" class="btn btn-accent" style="flex: 1;">Confirm
+                        Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <h4 style="color: var(--dark); margin-bottom: 0.2rem;">Order Placed!</h4>
+        <p style="color: #666; font-size: 0.9rem;">We'll contact you shortly.</p>
+    </div>
+
+    <script type="module" src="/src/customize.js"></script>
+</body>
+
+</html>
